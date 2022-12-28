@@ -2,6 +2,14 @@ first_number = 0
 intermediate_result = 0
 next_number = 0
 
+def pow() -> int:
+    global intermediate_result
+    global next_number
+    global first_number
+    intermediate_result = first_number ** next_number
+    first_number = intermediate_result
+
+
 def summa() -> int:
     global intermediate_result
     global next_number
@@ -43,6 +51,10 @@ def check_operation(sm_operation: str):
         multiplication()
     elif sm_operation == '/':
         division()
+    elif sm_operation == '^':
+        pow()
+    else:
+        print('Неизвестная операция')    
 
 def get_intermediate_result():
     global intermediate_result
@@ -67,3 +79,5 @@ def get_first_number():
 def set_first_number(smth):
     global first_number
     first_number = smth
+    
+    

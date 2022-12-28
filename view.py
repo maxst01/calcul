@@ -5,7 +5,7 @@ def input_number():
     return number
 
 def input_operation():
-    operation = input('введите операцию(+, -, *, /, = :  ')
+    operation = input('введите операцию +, -, *, /, = : ^  ')
     return operation
 
 def print_result(smth):
